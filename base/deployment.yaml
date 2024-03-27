@@ -36,6 +36,8 @@ spec:
         volumeMounts:
         - mountPath: "/var/lib/mysql"
           name: db-volume
+          persistentVolumeClaim:
+            claimName: mysql-pv-claim
       volumes:
       - name: db-volume
         emptyDir: {}
